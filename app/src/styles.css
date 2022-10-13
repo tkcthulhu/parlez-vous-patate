@@ -1,0 +1,29 @@
+body {
+    font-family: cursive;
+    background-color: antiquewhite;
+}
+
+button {
+    margin-bottom: 2vh;
+    margin-right: 1vw
+}
+
+.btn {
+    border: 1px black solid
+} 
+
+.navbar {
+    height: fit-content;
+    border-bottom: 3px black solid;
+}
+
+.card {
+    margin-bottom: 2vh;
+    border: 1px black solid
+}
+
+iframe {
+    margin-bottom: 5vh;
+    border: 1px black solid;
+    border-radius: 5%;
+}
