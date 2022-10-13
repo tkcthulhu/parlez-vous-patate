@@ -11,10 +11,10 @@ export function HomeButton(props) {
     let nowSpecial = []
 
     nowSpecial.push(<div key={num} className="col-8" id={"accordion" + num}>
-                        <h1>Special of the Render</h1>
+                        <h1>Le Special of the Render</h1>
                         <div className="card">
                             <div className="card-header" id={"heading" + num}>
-                                <h4>{special.title}</h4>
+                                <h4>Le {special.title}</h4>
                                 <h6>${special.price}</h6>
                                 <p>
                                 <a className="btn btn-light" data-bs-toggle="collapse" href={"#specialDesc" + num} role="button" aria-expanded="false" aria-controls={"specialDesc" + num}>
@@ -193,7 +193,7 @@ export function DinnerButton(props) {
                     <div key={i} className="col-lg-3 col-sm-6" id={"accordion" + i}>
                         <div className="card">
                           <div className="card-header" id={"heading" + i}>
-                            <h4>{selections[i].title}</h4>
+                            <h4>Le {selections[i].title}</h4>
                             <h6>${selections[i].price}</h6>
                             <p>
                                 <a className="btn btn-light" data-bs-toggle="collapse" href={"#dinnerDesc" + i} role="button" aria-expanded="false" aria-controls={"dinnerDesc" + i}>
