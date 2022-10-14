@@ -10,7 +10,8 @@ button {
 }
 
 .btn {
-    border: 1px black solid
+    border: 1px black solid;
+    width: fit-content;
 } 
 
 .navbar {
@@ -20,7 +21,8 @@ button {
 
 .card {
     margin-bottom: 2vh;
-    border: 1px black solid
+    border: 1px black solid;
+    background-color: rgba(255, 255, 255, .75);
 }
 
 iframe {
@@ -39,7 +41,7 @@ iframe {
 }
 
 .menu-background {
-    background-color: rgba(255, 255, 255, .75);
+    background-color: rgba(255, 255, 255, .5);
     border-radius: 7.5px;
     padding: 1vw;
 }

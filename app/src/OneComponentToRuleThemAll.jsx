@@ -32,5 +32,3 @@ export function Button(props) {
                     </>)
     } return(<div className="container-fluid menu-background"><div className="row"><h1>{props.search}</h1>{items}</div></div>)
 }
-
-// [...props.CART, selections[i]] ->
