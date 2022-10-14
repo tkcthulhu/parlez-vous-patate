@@ -21,6 +21,8 @@ function AppInfo() {
     'Side', 
     'Dessert'
   ]
+
+  let CART = [];
   
   const [menu, setMenu] = useState([]);
   const [page, setPage] = useState('Home')
