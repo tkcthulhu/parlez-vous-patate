@@ -8,7 +8,7 @@ import axios from 'axios';
 import './styles.css';
 
 import { Header } from './Header'
-import { HomeButton, AppetizerButton, BreakfastButton, BrunchButton, LunchButton, DinnerButton, SidesButton, DessertButton, ContactUsButton } from './Navbar';
+import { HomeButton, ContactUsButton } from './Navbar';
 
 function AppInfo() {
 
@@ -22,10 +22,10 @@ function AppInfo() {
     'Dessert'
   ]
 
-  let CART = [];
+  const CART = [];
   
   const [menu, setMenu] = useState([]);
-  const [page, setPage] = useState('Home')
+  const [page, setPage] = useState('Home');
   const [search, setSearch] = useState();
 
   useEffect(() => {
@@ -90,7 +90,7 @@ function AppInfo() {
         </div>
       </nav>
       {page === 'Home' && <HomeButton menu={menu} />}
-      {page === search && <Button menu={menu} search={search}/>}
+      {page === search && <Button menu={menu} search={search} CART={CART}/>}
       {page === 'ContactUs' && <ContactUsButton />}
     </>
   )
