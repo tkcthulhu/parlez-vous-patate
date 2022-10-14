@@ -25,10 +25,12 @@ export function Button(props) {
                                       </div>
                                     </div>
                                 </div>
-                                <button className="btn btn-light" onClick={() => {props.CART.push(selections[i]); console.log(props.CART)}}>Add to Basket</button>
+                                <button className="btn btn-light" onClick={() => {props.setCART([selections[i], ...props.CART]); console.log(props.CART)}}>Add to Basket</button>
                               </div>
                             </div>
                         </div>
                     </>)
     } return(<div className="container-fluid menu-background"><div className="row"><h1>{props.search}</h1>{items}</div></div>)
 }
+
+// [...props.CART, selections[i]] ->

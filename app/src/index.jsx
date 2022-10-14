@@ -22,8 +22,7 @@ function AppInfo() {
     'Dessert'
   ]
 
-  const CART = [];
-  
+  const [CART, setCART] = useState([])
   const [menu, setMenu] = useState([]);
   const [page, setPage] = useState('Home');
   const [search, setSearch] = useState();
@@ -90,7 +89,7 @@ function AppInfo() {
         </div>
       </nav>
       {page === 'Home' && <HomeButton menu={menu} />}
-      {page === search && <Button menu={menu} search={search} CART={CART}/>}
+      {page === search && <Button menu={menu} search={search} CART={CART} setCART={setCART}/>}
       {page === 'ContactUs' && <ContactUsButton />}
     </>
   )

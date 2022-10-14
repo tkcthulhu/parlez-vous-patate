@@ -11,9 +11,9 @@ export function HomeButton(props) {
     let nowSpecial = []
 
     nowSpecial.push(
-      <div key={num} className="col-8 menu-display" id={"accordion" + num}>
+      <div key={num} className="col-8 menu-background" id={"accordion" + num}>
         <h1>Le Special of the Render</h1>
-        <div className="card">
+        <div className="card  menu-display">
             <div className="card-header" id={"heading" + num}>
                 <h4>Le {special.title}</h4>
                 <h6>${special.price}</h6>
@@ -39,7 +39,7 @@ export function HomeButton(props) {
 
     return (
     <div className="container-fluid">
-        <div className="row justify-content-center menu-background">  
+        <div className="row justify-content-center">  
             {nowSpecial}
         </div>
     </div>

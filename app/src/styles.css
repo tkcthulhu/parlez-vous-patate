@@ -38,13 +38,12 @@ iframe {
     padding: 1vw;
 }
 
-/* .menu-background > * {
-    background-color: white;
+.menu-background {
+    background-color: rgba(255, 255, 255, .75);
     border-radius: 7.5px;
     padding: 1vw;
-    opacity: 50%;
 }
 
-.menu-background > .menu-display {
+.menu-display {
     opacity: 100%;
-} */
+}
