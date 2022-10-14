@@ -69,7 +69,7 @@ function AppInfo() {
           </button>
           <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Parlez Vous Pomme de Terre</h5>
+              <h5 className="offcanvas-title navbar-title-2" id="offcanvasNavbarLabel" >Parlez Vous Pomme de Terre</h5>
               <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">

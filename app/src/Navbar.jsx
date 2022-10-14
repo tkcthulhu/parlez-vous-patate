@@ -1,4 +1,12 @@
 import React from "react"
+import appetizers from './img/appetizer.jpg'
+import breakfast from './img/breakfast.jpg'
+import brunch from './img/brunch.jpg'
+import lunch from './img/lunch.jpg'
+import dinner from './img/dinner.jpg'
+import sides from './img/sides.jpg'
+import dessert from './img/dessert.jpg'
+import front from './img/restaurant-front.jpeg'
 
 export function HomeButton(props) {
 
@@ -38,7 +46,7 @@ export function HomeButton(props) {
 
     return (
     <div className="container-fluid">
-        <div className="row justify-content-center">  
+        <div className="row justify-content-center">        
             {nowSpecial}
         </div>
     </div>

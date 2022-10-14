@@ -53,3 +53,15 @@ iframe {
 #knives {
     height: 5vh;
 }
+
+.navbar-title-2 {
+    border-bottom: 1px black solid;
+}
+
+#front {
+    object-fit:scale-down;
+}
+
+.thin {
+    height: 10vh;
+}

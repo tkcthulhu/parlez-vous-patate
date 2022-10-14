@@ -36,7 +36,6 @@ export function CartButton(props) {
         )
 
         total.push(props.CART[i].price)
-        console.log(total)
     }
 
     function addTotal(total) {
