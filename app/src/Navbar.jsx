@@ -2,13 +2,13 @@ import React from "react"
 
 export function HomeButton(props) {
 
-    let mult = props.menu.length
+    let mult = props.menu.length;
 
-    let num = Math.round(Math.random() * mult)
+    let num = Math.round(Math.random() * mult);
 
-    let special = props.menu[num]
+    let special = props.menu[num];
 
-    let nowSpecial = []
+    let nowSpecial = [];
 
     nowSpecial.push(
       <div key={num} className="col-8 menu-background" id={"accordion" + num}>
@@ -34,9 +34,7 @@ export function HomeButton(props) {
                 <button className="btn btn-light" onClick={() => {props.setCART([special, ...props.CART]); console.log(props.CART)}}>Add to Basket</button>
             </div>
         </div>
-      </div>)
-
-    console.log(num)
+    </div>)
 
     return (
     <div className="container-fluid">
