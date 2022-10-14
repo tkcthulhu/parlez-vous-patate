@@ -12,9 +12,9 @@ export function Button(props) {
                                 <h4>Le {selections[i].title}</h4>
                                 <h6>${selections[i].price}</h6>
                                 <p>
-                                    <a className="btn btn-light" data-bs-toggle="collapse" href={"#" + props.search + "Desc" + i} role="button" aria-expanded="false" aria-controls={props.search + "Desc" + i}>
-                                Description
-                                </a>
+                                  <a className="btn btn-light" data-bs-toggle="collapse" href={"#" + props.search + "Desc" + i} role="button" aria-expanded="false" aria-controls={props.search + "Desc" + i}>
+                                    Description
+                                  </a>                                 
                                 </p>
                                 <div className="row">
                                     <div className="col">
@@ -25,6 +25,7 @@ export function Button(props) {
                                       </div>
                                     </div>
                                 </div>
+                                <button className="btn btn-light" onClick={() => {props.setCART([selections[i], ...props.CART]); console.log(props.CART)}}>Add to Basket</button>
                               </div>
                             </div>
                         </div>

@@ -4,11 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { useState, useEffect } from 'react';
 import { Button } from './OneComponentToRuleThemAll';
+import { CartButton } from './Cart';
 import axios from 'axios';
 import './styles.css';
 
 import { Header } from './Header'
-import { HomeButton, AppetizerButton, BreakfastButton, BrunchButton, LunchButton, DinnerButton, SidesButton, DessertButton, ContactUsButton } from './Navbar';
+import { HomeButton, ContactUsButton } from './Navbar';
 
 function AppInfo() {
 
@@ -21,9 +22,10 @@ function AppInfo() {
     'Side', 
     'Dessert'
   ]
-  
+
+  const [CART, setCART] = useState([])
   const [menu, setMenu] = useState([]);
-  const [page, setPage] = useState('Home')
+  const [page, setPage] = useState('Home');
   const [search, setSearch] = useState();
 
   useEffect(() => {
@@ -78,6 +80,11 @@ function AppInfo() {
                 </li>
                 {Buttons}
                 <li className="nav-item">
+                  <button id='cartButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Basket')}>
+                    Basket
+                  </button>
+                </li>
+                <li className="nav-item">
                   <button id='contactUsButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('ContactUs')}>
                     Contact Us
                   </button>
@@ -87,8 +94,9 @@ function AppInfo() {
           </div>
         </div>
       </nav>
-      {page === 'Home' && <HomeButton menu={menu} />}
-      {page === search && <Button menu={menu} search={search}/>}
+      {page === 'Home' && <HomeButton menu={menu} CART={CART} setCART={setCART}/>}
+      {page === search && <Button menu={menu} search={search} CART={CART} setCART={setCART}/>}
+      {page === 'Basket' && <CartButton CART={CART} setCART={setCART}/>}
       {page === 'ContactUs' && <ContactUsButton />}
     </>
   )
