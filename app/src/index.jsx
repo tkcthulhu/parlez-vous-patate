@@ -7,6 +7,7 @@ import { Button } from './OneComponentToRuleThemAll';
 import { CartButton } from './Cart';
 import axios from 'axios';
 import './styles.css';
+import knives from './knives.png';
 
 import { Header } from './Header'
 import { HomeButton, ContactUsButton } from './Navbar';
@@ -61,7 +62,7 @@ function AppInfo() {
     <> 
       <nav className="navbar navbar-light bg-light fixed-top">
         <div className="container-fluid">
-          <h1>Parlez Vous Pomme de Terre</h1><br/>
+          <h1><img src={knives} id='knives'/>Parlez Vous Pomme de Terre</h1><br/>
           <h6>Fine cuisine of Earthlings</h6>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>

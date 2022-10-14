@@ -49,8 +49,8 @@ export function HomeButton(props) {
 export function ContactUsButton() {
     return (
         <div className="container-fluid">
-            <div className="row justify-content-center menu-background">
-                <div className="col-4 contact-page menu-display">
+            <div className="row justify-content-center">
+                <div className="col-md-4 col-sm-12 contact-page menu-background">
                     <h1>Hours of Operation</h1>
                     <br/>
                     <h5>Mon-Thurs: 11:30 am - 9:30 pm</h5>
@@ -72,7 +72,7 @@ export function ContactUsButton() {
                     <h5>Lexington KY 40507</h5>
                     <br/>
                 </div>
-                <div className="col-4 contact-page">
+                <div className="col-md-4 col-sm-12 contact-page">
                     <iframe title='location' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.2114130383106!2d-84.49472698420385!3d38.04215997971169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884244e844532c33%3A0xb6919957af36b713!2s348%20E%20Main%20St%2C%20Lexington%2C%20KY%2040507!5e0!3m2!1sen!2sus!4v1665691595006!5m2!1sen!2sus" width="100%" height="100%" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

@@ -25,7 +25,7 @@ export function CartButton(props) {
                         ${props.CART[i].price}
                     </p>
                     <div className="row card-body justify-content-end">
-                        <div className="col-3">  
+                        <div className="col-lg-3 col-sm-6">  
                             <button className="btn btn-light" onClick={() => {props.setCART(removeItem(Cart, [i]))}}>
                                 Remove
                             </button>

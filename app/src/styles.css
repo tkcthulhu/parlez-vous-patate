@@ -1,7 +1,7 @@
 body {
     font-family: cursive;
     background-color: white;
-    background-image: url(../img/marble.jpeg);
+    background-image: url(./img/marble.jpeg);
 }
 
 button {
@@ -28,12 +28,12 @@ button {
 iframe {
     margin-bottom: 5vh;
     border: 1px black solid;
-    border-radius: 5%;
+    border-radius: 7.5px;
 }
 
 .contact-page {
     border: 1px black solid;
-    border-radius: 5%;
+    border-radius: 7.5px;
     background-color: white;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -48,4 +48,8 @@ iframe {
 
 .menu-display {
     opacity: 100%;
+}
+
+#knives {
+    height: 5vh;
 }
