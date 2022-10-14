@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import { useState, useEffect } from 'react';
+import { Button } from './OneComponentToRuleThemAll';
 import axios from 'axios';
 import './styles.css';
 
@@ -10,8 +12,19 @@ import { HomeButton, AppetizerButton, BreakfastButton, BrunchButton, LunchButton
 
 function AppInfo() {
 
+  const Meals = [
+    'Appetizer', 
+    'Breakfast', 
+    'Brunch', 
+    'Lunch', 
+    'Dinner', 
+    'Side', 
+    'Dessert'
+  ]
+  
   const [menu, setMenu] = useState([]);
   const [page, setPage] = useState('Home')
+  const [search, setSearch] = useState();
 
   useEffect(() => {
     axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
@@ -21,6 +34,24 @@ function AppInfo() {
   if (menu.length === 0) {
     return (
       <div className='container-fluid'><div className='row justify-content-center'><div className='col-8'><h1>Hold le damn horses...</h1></div></div></div>
+    )
+  }
+
+  let Buttons = [];
+
+  for (let i = 0; i < Meals.length; i++) {
+    Buttons.push(
+      <li className="nav-item">
+        <button 
+          className='btn btn-light' 
+          type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasNavbar" 
+          aria-controls="offcanvasNavbar" 
+          onClick={() => {setPage(Meals[i]); setSearch(Meals[i])}}>
+          {Meals[i]}
+        </button>
+      </li>
     )
   }
 
@@ -45,40 +76,7 @@ function AppInfo() {
                     Home
                   </button>
                 </li>
-                <li className="nav-item">
-                  <button id='appButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Appetizers')}>
-                    Appetizer</button>
-                </li>
-                <li className="nav-item">
-                  <button id='breakfastButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Breakfast')}>
-                    Breakfast
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button id='brunchButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Brunch')}>
-                    Brunch
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button id='lunchButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Lunch')}>
-                    Lunch
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button id='dinnerButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Dinner')}>
-                    Dinner
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button id='sidesButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Sides')}>
-                    Sides
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button id='dessertButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Desserts')}>
-                    Desserts
-                  </button>
-                </li>
+                {Buttons}
                 <li className="nav-item">
                   <button id='contactUsButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('ContactUs')}>
                     Contact Us
@@ -90,15 +88,8 @@ function AppInfo() {
         </div>
       </nav>
       {page === 'Home' && <HomeButton menu={menu} />}
-      {page === 'Appetizers' && <AppetizerButton menu={menu} />}
-      {page === 'Breakfast' && <BreakfastButton menu={menu} />}
-      {page === 'Brunch' && <BrunchButton menu={menu} />}
-      {page === 'Lunch' && <LunchButton menu={menu} />}
-      {page === 'Dinner' && <DinnerButton menu={menu} />}
-      {page === 'Sides' && <SidesButton menu={menu} />}
-      {page === 'Desserts' && <DessertButton menu={menu} />}
+      {page === search && <Button menu={menu} search={search}/>}
       {page === 'ContactUs' && <ContactUsButton />}
-
     </>
   )
 }

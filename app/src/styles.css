@@ -1,6 +1,7 @@
 body {
     font-family: cursive;
-    background-color: antiquewhite;
+    background-color: white;
+    background-image: url(../img/marble.jpeg);
 }
 
 button {
@@ -27,3 +28,23 @@ iframe {
     border: 1px black solid;
     border-radius: 5%;
 }
+
+.contact-page {
+    border: 1px black solid;
+    border-radius: 5%;
+    background-color: white;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 1vw;
+}
+
+/* .menu-background > * {
+    background-color: white;
+    border-radius: 7.5px;
+    padding: 1vw;
+    opacity: 50%;
+}
+
+.menu-background > .menu-display {
+    opacity: 100%;
+} */
