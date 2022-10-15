@@ -8,6 +8,7 @@ import { CartButton } from './Cart';
 import axios from 'axios';
 import './styles.css';
 import knives from './knives.png';
+import cart from './img/cart.png'
 
 import { Header } from './Header'
 import { HomeButton, ContactUsButton } from './Navbar';
@@ -58,11 +59,19 @@ function AppInfo() {
     )
   }
 
+  function CornerButton() {
+    return(
+      <button className="navbar-toggler" id='bButton' type="button" onClick={() => setPage('Basket')}>
+        <img src={cart}/>
+      </button>
+    )
+  }
+
   return (
     <> 
       <nav className="navbar navbar-light bg-light fixed-top">
         <div className="container-fluid">
-          <h1><img src={knives} id='knives'/>Parlez Vous Pomme de Terre</h1><br/>
+          <h1 onClick={() => setPage('Home')}><img src={knives} id='knives'/>Parlez Vous Pomme de Terre</h1><br/>
           <h6>Fine cuisine of Earthlings</h6>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
@@ -95,6 +104,7 @@ function AppInfo() {
           </div>
         </div>
       </nav>
+      <CornerButton />
       {page === 'Home' && <HomeButton menu={menu} CART={CART} setCART={setCART}/>}
       {page === search && <Button menu={menu} search={search} CART={CART} setCART={setCART}/>}
       {page === 'Basket' && <CartButton CART={CART} setCART={setCART}/>}
