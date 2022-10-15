@@ -67,7 +67,7 @@ iframe {
 }
 
 #bButton {
-    position: absolute;
+    position:fixed;
     top: 90%;
     left: 92.5%;
     background-color: rgba(255, 255, 255, .75);
