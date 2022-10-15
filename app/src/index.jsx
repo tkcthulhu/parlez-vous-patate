@@ -7,6 +7,8 @@ import { Button } from './OneComponentToRuleThemAll';
 import { CartButton } from './Cart';
 import axios from 'axios';
 import './styles.css';
+import knives from './knives.png';
+import cart from './img/cart.png'
 
 import { Header } from './Header'
 import { HomeButton, ContactUsButton } from './Navbar';
@@ -57,18 +59,26 @@ function AppInfo() {
     )
   }
 
+  function CornerButton() {
+    return(
+      <button className="navbar-toggler" id='bButton' type="button" onClick={() => setPage('Basket')}>
+        <img src={cart}/>
+      </button>
+    )
+  }
+
   return (
     <> 
       <nav className="navbar navbar-light bg-light fixed-top">
         <div className="container-fluid">
-          <h1>Parlez Vous Pomme de Terre</h1><br/>
+          <h1 onClick={() => setPage('Home')}><img src={knives} id='knives'/>Parlez Vous Pomme de Terre</h1><br/>
           <h6>Fine cuisine of Earthlings</h6>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Parlez Vous Pomme de Terre</h5>
+              <h5 className="offcanvas-title navbar-title-2" id="offcanvasNavbarLabel" >Parlez Vous Pomme de Terre</h5>
               <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
@@ -94,6 +104,7 @@ function AppInfo() {
           </div>
         </div>
       </nav>
+      <CornerButton />
       {page === 'Home' && <HomeButton menu={menu} CART={CART} setCART={setCART}/>}
       {page === search && <Button menu={menu} search={search} CART={CART} setCART={setCART}/>}
       {page === 'Basket' && <CartButton CART={CART} setCART={setCART}/>}
