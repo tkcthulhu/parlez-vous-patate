@@ -8,7 +8,7 @@ import { CartButton } from './Cart';
 import axios from 'axios';
 import './styles.css';
 import knives from './knives.png';
-import cart from './img/cart.png'
+import cart from './img/cart.png';
 
 import { Header } from './Header'
 import { HomeButton, ContactUsButton } from './Navbar';
@@ -104,11 +104,12 @@ function AppInfo() {
           </div>
         </div>
       </nav>
-      <CornerButton />
+      
       {page === 'Home' && <HomeButton menu={menu} CART={CART} setCART={setCART}/>}
       {page === search && <Button menu={menu} search={search} CART={CART} setCART={setCART}/>}
       {page === 'Basket' && <CartButton CART={CART} setCART={setCART}/>}
       {page === 'ContactUs' && <ContactUsButton />}
+      <CornerButton />
     </>
   )
 }
