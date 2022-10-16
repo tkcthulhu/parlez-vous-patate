@@ -25,7 +25,7 @@ export function Button(props) {
                                       </div>
                                     </div>
                                 </div>
-                                <button className="btn btn-light" onClick={() => {props.setCART([selections[i], ...props.CART]); console.log(props.CART)}}>Add to Basket</button>
+                                <button className="btn btn-light" onClick={() => {props.setCART([selections[i], ...props.CART])}}>Add to Basket</button>
                               </div>
                             </div>
                         </div>
