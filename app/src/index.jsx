@@ -37,7 +37,15 @@ function AppInfo() {
 
   if (menu.length === 0) {
     return (
-      <div className='container-fluid'><div className='row justify-content-center'><div className='col-8'><h1>Hold le damn horses...</h1></div></div></div>
+      <div className='container-fluid'>
+        <div className='row justify-content-center'>
+          <div className='col-8'>
+            <h1>
+              Hold le damn horses...
+            </h1>
+          </div>
+        </div>
+      </div>
     )
   }
 
@@ -52,7 +60,8 @@ function AppInfo() {
           data-bs-toggle="offcanvas" 
           data-bs-target="#offcanvasNavbar" 
           aria-controls="offcanvasNavbar" 
-          onClick={() => {setPage(Meals[i]); setSearch(Meals[i])}}>
+          onClick={() => {setPage(Meals[i]); setSearch(Meals[i])}}
+        >
           {Meals[i]}
         </button>
       </li>
@@ -61,7 +70,12 @@ function AppInfo() {
 
   function CornerButton() {
     return(
-      <button className="navbar-toggler" id='bButton' type="button" onClick={() => setPage('Basket')}>
+      <button 
+        className="navbar-toggler" 
+        id='bButton' 
+        type="button" 
+        onClick={() => setPage('Basket')}
+      >
         <img src={cart}/>
       </button>
     )
@@ -71,31 +85,85 @@ function AppInfo() {
     <> 
       <nav className="navbar navbar-light bg-light fixed-top">
         <div className="container-fluid">
-          <h1 onClick={() => setPage('Home')}><img src={knives} id='knives'/>Parlez Vous Pomme de Terre</h1><br/>
+          <h1 
+            onClick={() => setPage('Home')}>
+              <img 
+                src={knives} 
+                id='knives'
+              />
+            Parlez Vous Pomme de Terre
+          </h1>
+          <br/>
           <h6>Fine cuisine of Earthlings</h6>
-          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" 
+            aria-controls="offcanvasNavbar"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div 
+            className="offcanvas offcanvas-end" 
+            tabindex="-1" 
+            id="offcanvasNavbar" 
+            aria-labelledby="offcanvasNavbarLabel"
+          >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title navbar-title-2" id="offcanvasNavbarLabel" >Parlez Vous Pomme de Terre</h5>
-              <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h5 
+                className="offcanvas-title navbar-title-2" 
+                id="offcanvasNavbarLabel" 
+              >
+                Parlez Vous Pomme de Terre
+              </h5>
+              <button 
+                type="button" 
+                className="btn-close text-reset" 
+                data-bs-dismiss="offcanvas" 
+                aria-label="Close"
+              >
+              </button>
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <button id='homeButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Home')}>
+                  <button 
+                    id='homeButton' 
+                    className='btn btn-light' 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasNavbar" 
+                    aria-controls="offcanvasNavbar" 
+                    onClick={() => setPage('Home')}
+                  >
                     Home
                   </button>
                 </li>
                 {Buttons}
                 <li className="nav-item">
-                  <button id='cartButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('Basket')}>
+                  <button 
+                    id='cartButton' 
+                    className='btn btn-light' 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasNavbar" 
+                    aria-controls="offcanvasNavbar" 
+                    onClick={() => setPage('Basket')}
+                  >
                     Basket
                   </button>
                 </li>
                 <li className="nav-item">
-                  <button id='contactUsButton' className='btn btn-light' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" onClick={() => setPage('ContactUs')}>
+                  <button 
+                    id='contactUsButton' 
+                    className='btn btn-light' 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasNavbar" 
+                    aria-controls="offcanvasNavbar" 
+                    onClick={() => setPage('ContactUs')}
+                  >
                     Contact Us
                   </button>
                 </li>

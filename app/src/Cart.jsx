@@ -26,7 +26,10 @@ export function CartButton(props) {
                     </p>
                     <div className="row card-body justify-content-end">
                         <div className="col-lg-3 col-sm-6">  
-                            <button className="btn btn-light" onClick={() => {props.setCART(removeItem(Cart, [i]))}}>
+                            <button 
+                                className="btn btn-light" 
+                                onClick={() => {props.setCART(removeItem(Cart, [i]))}}
+                            >
                                 Remove
                             </button>
                         </div> 
@@ -49,17 +52,23 @@ export function CartButton(props) {
 
     return (
         <div className="container-fluid">
-            <div className="row justify-content-center">               
+            <div className="row justify-content-center">                
                 <div className="col-8 menu-background">                
                     <h3>Your Basket</h3><br/>
                     {items}
                     <div className="card">
                         <h5 className="card-header">Total</h5>
-                        <p className="card-body">${addTotal(total)}</p>
+                        <p className="card-body">
+                            ${addTotal(total)}
+                        </p>
                         <h5 className="card-header">Tax</h5>
-                        <p className="card-body">${(finalTotal * .06).toFixed(2)}</p>
-                        <h5 className="card-header">Final Total</h5><br/>
-                        <p className="card-body">${(finalTotal * 1.06).toFixed(2)}</p>
+                        <p className="card-body">
+                            ${(finalTotal * .06).toFixed(2)}
+                        </p>
+                        <h5 className="card-header">Final Total</h5>
+                        <p className="card-body">
+                            ${(finalTotal * 1.06).toFixed(2)}
+                        </p>
                     </div>
                 </div>
             </div>
