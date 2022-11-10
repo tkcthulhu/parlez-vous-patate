@@ -31,7 +31,7 @@ function AppInfo() {
   const [search, setSearch] = useState();
 
   useEffect(() => {
-    axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
+    axios.get('https://8000-tkcthulhu-pathofpotato-wbtdk0llxgm.ws-us75.gitpod.io/menu/full_menu/')
       .then((resp) => setMenu(resp.data));
   }, [])
 
