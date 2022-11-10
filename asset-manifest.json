@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/parlez-vous-pomme-de-terre/static/css/main.3deaa682.css",
+    "main.js": "/parlez-vous-pomme-de-terre/static/js/main.d092a56e.js",
+    "static/media/marble.jpeg": "/parlez-vous-pomme-de-terre/static/media/marble.7a8a7975f7ff087ec731.jpeg",
+    "static/media/knives.png": "/parlez-vous-pomme-de-terre/static/media/knives.ca4dfb949a8877ba84f5.png",
+    "index.html": "/parlez-vous-pomme-de-terre/index.html",
+    "main.3deaa682.css.map": "/parlez-vous-pomme-de-terre/static/css/main.3deaa682.css.map",
+    "main.d092a56e.js.map": "/parlez-vous-pomme-de-terre/static/js/main.d092a56e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3deaa682.css",
+    "static/js/main.d092a56e.js"
+  ]
+}
